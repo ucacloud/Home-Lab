@@ -45,3 +45,13 @@ Pushing from the bash terminal kept failing with invalid token errors even with 
 - GitHub no longer accepts passwords for git operations - Personal Access Token required
 - When token auth keeps failing, embed it directly in the remote URL
 - `git config --global user.email` and `git config --global user.name` need to be set before first commit on a fresh machine
+
+## [March 2026] Installed Podman
+
+**What I did:**
+Installed Podman 4.9.3 via apt. Verified with hello-world container.
+
+**What I learned:**
+- `sudo apt install podman -y` broken down: sudo = run as admin, apt = package manager, install = action, podman = package name, -y = auto confirm
+- Podman runs Docker images natively - the whole Docker Hub library works out of the box
+- "Hello from Docker" in the output is just hardcoded text inside the image itself, not an error. Podman pulled and ran it correctly.

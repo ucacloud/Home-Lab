@@ -49,3 +49,11 @@ Every significant decision made during this project - what I picked, why, and wh
 **Decision:** README reflects current state only. DECISIONS.md holds the reasoning. journal.md holds the running log.
 **Why:** A README full of "we used to do X" is harder to read and worse as a portfolio piece. Each file has one job.
 **Ruled out:** Changelog inside the README - that works for versioned libraries, not a living infrastructure project.
+
+---
+
+## [March 2026] Purged Podman / Installed Docker
+
+**Decision:** Switch to Docker instead of Podman.
+**Why:** There were connections issues with Portainer when using Podman - Rootless mode + Ubuntu isn't officially supported.
+**Ruled out:** Continuing to troubleshoot Podman/Portainer compatibility — rootless mode on Ubuntu isn't officially supported and the time cost outweighed any security benefit at this stage of the project.

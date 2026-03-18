@@ -17,7 +17,7 @@ Everything runs on the Beelink. Nothing is farmed out to SaaS. All data stays at
 | Hardware acquired and set up | ✅ Done |
 | Ubuntu Server 24.04 LTS installed | ✅ Done |
 | SSH access from Windows desktop | ✅ Done |
-| Podman installed | 🔲 Next |
+| Docker installed | ✅ Next |
 | Portainer running | 🔲 Planned |
 | PostgreSQL container | 🔲 Planned |
 | Financial advisor bot | 🔲 Planned |
@@ -159,7 +159,7 @@ A solo-developed game. Separate project, tracked in its own repo. Hosted on the 
 |Layer              |Technology                                               |
 |-------------------|---------------------------------------------------------|
 |OS                 |Ubuntu Server 24.04 LTS                                  |
-|Containers         |Podman + Podman Compose                                  |
+|Containers         |Docker + Docker Compose                                  |
 |Container UI       |Portainer                                                |
 |Agent interface    |OpenClaw (openclaw.ai)                                   |
 |Agent orchestration|CrewAI (open source, self-hosted)                        |
@@ -235,7 +235,7 @@ The people making serious money in the AI era aren’t the ones who learned to u
 
 **Skills this project directly builds:**
 
-Linux server administration, containerization (Podman/Docker), remote system management via SSH, database administration (PostgreSQL), API integration and cost management, multi-agent system design, observability and dashboards, SSL/TLS and reverse proxy configuration, infrastructure as code (Ansible), and eventually Kubernetes cluster management.
+Linux server administration, containerization (Docker), remote system management via SSH, database administration (PostgreSQL), API integration and cost management, multi-agent system design, observability and dashboards, SSL/TLS and reverse proxy configuration, infrastructure as code (Ansible), and eventually Kubernetes cluster management.
 
 **What this project teaches that most courses don’t:**
 
@@ -262,7 +262,8 @@ Thinking in systems rather than tasks. Designing what an agent does, when, with 
 - [CrewAI](https://crewai.com) — multi-agent orchestration framework
 - [n8n](https://n8n.io) — workflow automation
 - [Anthropic API Console](https://platform.anthropic.com) — model access and spending caps
-- [Podman Documentation](https://podman.io/docs)
+- [Docker Documentation](https://docs.docker.com)
+- [Docker Compose Documentation](https://docs.docker.com/compose)
 - [Portainer Documentation](https://docs.portainer.io)
 - [DECISIONS.md](DECISIONS.md) — architectural decisions and reasoning
 - [journal.md](journal.md) — running log of what was built and what broke

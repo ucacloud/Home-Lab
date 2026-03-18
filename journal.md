@@ -55,3 +55,13 @@ Installed Podman 4.9.3 via apt. Verified with hello-world container.
 - `sudo apt install podman -y` broken down: sudo = run as admin, apt = package manager, install = action, podman = package name, -y = auto confirm
 - Podman runs Docker images natively - the whole Docker Hub library works out of the box
 - "Hello from Docker" in the output is just hardcoded text inside the image itself, not an error. Podman pulled and ran it correctly.
+
+## [March 2026] Purged Podman / Installed Docker
+
+**What I did:**
+Purged Podman / installed Docker 29.3.0. Verified with hello-world container.
+
+**What I learned:**
+- When I attempted to create a new Podman connection in Portainer, there was a note that mentioned "Rootless mode + Ubuntu not officially supported".
+- I tried to do a permission fix and system reboot but it didn't resolve the issue.
+- Decided to move forward with the project and use Docker instead since the 'risk' is almost negligible.

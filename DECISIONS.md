@@ -57,3 +57,10 @@ Every significant decision made during this project - what I picked, why, and wh
 **Decision:** Switch to Docker instead of Podman.
 **Why:** There were connections issues with Portainer when using Podman - Rootless mode + Ubuntu isn't officially supported.
 **Ruled out:** Continuing to troubleshoot Podman/Portainer compatibility — rootless mode on Ubuntu isn't officially supported and the time cost outweighed any security benefit at this stage of the project.
+
+---
+
+## [March 2026] Installed Portainer
+**Decision:** Install Portainer
+**Why:** Portainer alloes me to start and stop containers, read logs, inspect whats happening inside containers and deploy new stacks.
+**Ruled out:** Nothing

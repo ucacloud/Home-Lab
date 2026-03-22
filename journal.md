@@ -65,3 +65,14 @@ Purged Podman / installed Docker 29.3.0. Verified with hello-world container.
 - When I attempted to create a new Podman connection in Portainer, there was a note that mentioned "Rootless mode + Ubuntu not officially supported".
 - I tried to do a permission fix and system reboot but it didn't resolve the issue.
 - Decided to move forward with the project and use Docker instead since the 'risk' is almost negligible.
+
+## [March 2026] Installed and setup Portainer
+
+**What I was trying to do:**
+Get Portainer linked to Docker to that I can monitor it.
+
+**What I did:**
+Installed Portainer, connected it to my local machine and was able to view my Docker from the Portainer dashboard.
+
+**What I learned:**
+- Portainer can allow me to start and stop containers, read logs, inspect whats happening inside containers and deploy new stacks.

@@ -17,8 +17,8 @@ Everything runs on the Beelink. Nothing is farmed out to SaaS. All data stays at
 | Hardware acquired and set up | ✅ Done |
 | Ubuntu Server 24.04 LTS installed | ✅ Done |
 | SSH access from Windows desktop | ✅ Done |
-| Docker installed | ✅ Next |
-| Portainer running | 🔲 Planned |
+| Docker installed | ✅ Done |
+| Portainer running | ✅ Done |
 | PostgreSQL container | 🔲 Planned |
 | Financial advisor bot | 🔲 Planned |
 | Polymarket trading agent | 🔲 Planned |

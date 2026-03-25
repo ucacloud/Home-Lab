@@ -76,3 +76,17 @@ Installed Portainer, connected it to my local machine and was able to view my Do
 
 **What I learned:**
 - Portainer can allow me to start and stop containers, read logs, inspect whats happening inside containers and deploy new stacks.
+
+## [March 2026] Created a simple bot
+
+**What I was trying to do:**
+Get a foundational understanding of how to make a simple Claude bot.
+
+**What I did:**
+Got an API key from Anthropic, built a somple bot that acts on a loop to answer any questions and exits when the user types 'quit'.
+
+**What I learned:**
+- How to designate which model to use
+- Set a usage rate limit
+- Save the conversation history to an array
+- Store API keys in .env and reference with os.getenv() — never hardcode credentials

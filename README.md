@@ -19,7 +19,7 @@ Everything runs on the Beelink. Nothing is farmed out to SaaS. All data stays at
 | SSH access from Windows desktop | ✅ Done |
 | Docker installed | ✅ Done |
 | Portainer running | ✅ Done |
-| PostgreSQL container | 🔲 Planned |
+| PostgreSQL container | ✅ Done |
 | Financial advisor bot | 🔲 Planned |
 | Polymarket trading agent | 🔲 Planned |
 | Agent dashboard website | 🔲 Planned |

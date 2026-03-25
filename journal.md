@@ -90,3 +90,14 @@ Got an API key from Anthropic, built a somple bot that acts on a loop to answer 
 - Set a usage rate limit
 - Save the conversation history to an array
 - Store API keys in .env and reference with os.getenv() — never hardcode credentials
+
+## [March 2026] Installed DBeaver / Connected Postgres
+
+**What I was trying to do:**
+Get access to my Postgres database
+
+**What I did:**
+Installed DBeaver and connected it to my Postgres database
+
+**What I learned:**
+- How to connect my database to DBeaver and what credentials were needed

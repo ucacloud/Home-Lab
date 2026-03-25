@@ -64,3 +64,10 @@ Every significant decision made during this project - what I picked, why, and wh
 **Decision:** Install Portainer
 **Why:** Portainer alloes me to start and stop containers, read logs, inspect whats happening inside containers and deploy new stacks.
 **Ruled out:** Nothing
+
+---
+
+## [March 2026] Installed DBeaver / Connected Postgres
+**Decision:** Install DBeaver / Connect Postgres
+**Why:** DBeaver allows me do manage my Postgres database on my local machine
+**Ruled out:** pgAdmin — DBeaver supports multiple database types so it's more versatile long term. pgAdmin is PostgreSQL only.

@@ -101,3 +101,82 @@ Installed DBeaver and connected it to my Postgres database
 
 **What I learned:**
 - How to connect my database to DBeaver and what credentials were needed
+
+---
+ 
+## [March 2026] Created a simple bot
+ 
+**What I was trying to do:**
+Get a foundational understanding of how to make a simple Claude bot.
+ 
+**What I did:**
+Got an API key from Anthropic, built a simple bot that acts on a loop to answer any questions and exits when the user types 'quit'.
+ 
+**What I learned:**
+- How to designate which model to use
+- Set a usage rate limit
+- Save the conversation history to an array
+- Store API keys in .env and reference with os.getenv() — never hardcode credentials
+ 
+---
+ 
+## [March 2026] Installed DBeaver / Connected Postgres
+ 
+**What I was trying to do:**
+Get access to my Postgres database.
+ 
+**What I did:**
+Installed DBeaver and connected it to my Postgres database.
+ 
+**What I learned:**
+- How to connect my database to DBeaver and what credentials were needed.
+ 
+---
+ 
+## [March 2026] Built the personal finance bot
+ 
+**What I was trying to do:**
+Build a dedicated financial advisor bot that keeps conversations in PostgreSQL and coaches toward financial freedom.
+ 
+**What I did:**
+Built the finance bot using Claude Sonnet with PostgreSQL-backed persistent memory. Tuned the system prompt for financial coaching. Added a 20-message sliding window to manage token costs. Full history stays in PostgreSQL but only the recent window goes to the API.
+ 
+**What I learned:**
+- How to connect Python to PostgreSQL via psycopg2
+- The sliding window pattern for token management - save everything, send only what's needed
+- System prompt design matters - specific principles produce better coaching than generic instructions
+- Conversation history needs to be in chronological order for the API, even when you query in reverse
+ 
+---
+ 
+## [April 2026] Installed Hermes Agent and got Herman running
+ 
+**What I was trying to do:**
+Set up an always-on AI agent accessible from my phone that could eventually run overnight jobs, manage projects, and coordinate other bots.
+ 
+**What I did:**
+Decided between OpenClaw and Hermes. Chose Hermes -  created a SOUL.md with the Chief of Staff role, communication rules, full project context, and cost management instructions. Tested on Telegram, follows the SOUL.md personality, and is reachable from my phone.
+ 
+**What I learned:**
+- Hermes Agent is a full platform
+- SOUL.md loads fresh every message
+- `/reset` clears the session context but Honcho memory persists across resets
+- System-level systemd service needs `sudo $(which hermes)` because sudo doesn't inherit the user's PATH
+ 
+---
+ 
+## [April 2026] Set up Ollama on Windows desktop for local inference
+ 
+**What I was trying to do:**
+Get a local model running on my Windows PC's GPU so background tasks and cron jobs can run for free instead of burning API credits.
+ 
+**What I did:**
+Installed Ollama on Windows, pulled Qwen3 8B (~5.2GB). Tested in command prompt the model runs and responds. Set the OLLAMA_HOST environment variable so it accepts connections from the LAN. Verified from The Bee that it can see the model. Registered it as a custom endpoint in Hermes. Both providers work - Claude Sonnet for interactive, Ollama for background.
+ 
+**What I learned:**
+- Ollama exposes an OpenAI-compatible API at port 11434 by default
+- By default it only listens on localhost - need the OLLAMA_HOST environment variable set to 0.0.0.0 to accept LAN connections
+- Qwen3 8B fits in 8GB VRAM at Q4 quantization
+- Windows sleep must be set to Never or Ollama becomes unreachable from the network
+- Local model quality is noticeably lower than Claude Sonnet
+- If the Windows PC is off, Hermes falls back to Anthropic automatically

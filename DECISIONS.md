@@ -71,3 +71,59 @@ Every significant decision made during this project - what I picked, why, and wh
 **Decision:** Install DBeaver / Connect Postgres
 **Why:** DBeaver allows me do manage my Postgres database on my local machine
 **Ruled out:** pgAdmin — DBeaver supports multiple database types so it's more versatile long term. pgAdmin is PostgreSQL only.
+ 
+---
+ 
+## [March 2026] Built a personal finance bot
+ 
+**Decision:** Build a dedicated finance bot using Anthropic API + PostgreSQL.
+**Why:** Needed a real project to learn API integration, database persistence, and conversation management. Finance coaching tied to a real goal. Practical use case I'll actually use.
+**Ruled out:** Using a generic chatbot
+ 
+---
+ 
+## [March 2026] Sliding window for finance bot context
+ 
+**Decision:** 20-message sliding window (10 exchanges) on the finance bot.
+**Why:** Without it, every conversation sends the entire history to the API. The window queries the last 20 messages from PostgreSQL using a DESC/ASC subquery pattern. Full history stays in the database, nothing is lost.
+**Ruled out:** Sending full history
+ 
+---
+ 
+## [April 2026] Chose Hermes Agent over OpenClaw
+ 
+**Decision:** Hermes Agent as the agent platform.
+**Why:** Python-based. Native cron scheduling with per-job model/provider overrides - critical for overnight monitoring with local models. Built-in Honcho memory integration. Native Anthropic provider with prompt caching.
+**Ruled out:** OpenClaw — more mature, bigger community, but Node.js-based which I'm less comfortable hacking on. Both support Telegram, Discord, Anthropic, and self-hosting. OpenClaw is a strong project but Hermes fits my stack better. The migration path means this isn't a one-way door.
+ 
+---
+ 
+## [April 2026] Herman as Chief of Staff
+ 
+**Decision:** Named the agent Herman, role is Chief of Staff.
+**Why:** Chief of Staff signals strategic thinking, opportunity identification, and proactive management. I want him thinking ahead and surfacing opportunities, not just building what he's told.
+**Ruled out:** Senior Architect - too narrow, implies only technical decisions.
+ 
+---
+ 
+## [April 2026] Ollama on Windows desktop for local inference
+ 
+**Decision:** Run Ollama with Qwen3 8B on the Windows desktop GPU as a secondary inference provider.
+**Why:** 8GB VRAM enables GPU-accelerated inference for 7-8B models. The Bee's AMD GPU can't do CUDA, so CPU-only inference there would be slow. The Windows PC is on the same LAN so The Bee just calls it over the network. Background/cron tasks run on the local model for free. Interactive work stays on Claude Sonnet for quality. If the Windows PC is off, Hermes falls back to Anthropic automatically.
+**Ruled out:** Running Ollama on The Bee - AMD GPU means CPU-only. Running everything on Anthropic - works but costs add up. 
+ 
+---
+ 
+## [April 2026] Telegram as primary messaging channel
+ 
+**Decision:** Telegram for Herman's messaging interface.
+**Why:** Telegram was designed around bots - setup is trivial, bots get dedicated DM threads, notifications are clean.
+**Ruled out:** Discord
+ 
+---
+ 
+## [April 2026] Edge TTS over premium TTS providers
+ 
+**Decision:** Edge TTS for text-to-speech.
+**Why:** Free, no API key needed, quality is good enough.
+**Ruled out:** ElevenLabs and OpenAI TTS

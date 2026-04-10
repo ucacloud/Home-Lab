@@ -212,29 +212,6 @@ The RTX 2070 SUPER (8GB VRAM) is shared between Hindsight memory processing and 
  
 -----
  
-## Documentation Pattern
- 
-Three files, all written in first person:
- 
-- **README.md** - current state only (this file)
-- **DECISIONS.md** - architectural decisions with reasoning and what was ruled out
-- **journal.md** - running build/break/learn log
- 
-Sensitive details (IPs, usernames, bot names, identifiers) are stripped before GitHub pushes. Internal configs managed via `.env` and systemd overrides.
- 
------
- 
-## Security
- 
-- SSH key authentication only - password login disabled
-- All data processed locally; Anthropic API does not train on API data
-- Hindsight memory stored on-machine in PostgreSQL
-- Hard API spending cap set in Anthropic console
-- Each agent and database role operates with minimum required permissions
-- Sensitive config in systemd overrides and `.env` files, not in code
- 
------
- 
 ## Cost
  
 | Item | Cost |
